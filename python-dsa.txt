@@ -1,0 +1,112 @@
+-> Review for python DSA
+
+*****Intro******
+
+Guido Van Rossum - Python Lang Developer in 1990s
+Interpreted language
+
+Python’s classes may also define one or more methods 
+(also known as member functions), which are invoked on a 
+specific instance of a class using the dot (“.”) operator.
+
+bool, int, float, tuple, str, frozenset are immutable. 
+what this means is that the respective objects have has a fixed value upon instantiation that cannot subsequently be changed. For example, the float class is immutable.
+Once an instance has been created, its value cannot be changed (although an identifier referencing that object can be reassigned to a different value).
+
+To express a tuple of length one as a literal, a comma must be placed after the element, but within the parentheses. 
+For example, (17,) is a one-element tuple. The reason for this requirement is that, without the trailing comma, the expression (17) is viewed as a simple parenthesized numeric expression.
+
+delimiters can be ignored in strings using escape character(\).
+
+''' or """ inside print statement indicates multiline sentences.
+
+sets are unordered and can only have instances of immutable types.
+
+The and and or operators short-circuit, in that they do not evaluate the second
+operand if the result can be determined based on the value of the first operand.
+
+In most programming situations, the equivalence tests == and != are the appropriate operators; use of is and is not should be reserved for situations in which it is necessary to detect true aliasing.
+
+For example, [5, 6, 9] < [5, 7] because of the entries at index 1.
+
+Unlike Java and C++, Python is a dynamically typed language, and therefore a Python signature does not designate the types of those parameters, nor the type (if any) of a return value.
+
+In the context of a function signature, the identifiers used to describe the expected parameters are known as formal parameters, and the objects sent by the caller when invoking the function are the actual parameters.
+
+An advantage to Python’s mechanism for passing information to and from a function 
+is that objects are not copied. This ensures that the invocation of a function is 
+efficient, even in a case where a parameter or return value is a complex object.
+
+print takes sep= and end= kw params.
+input always takes the string of values that are entered. They shd be type casted before using.
+
+fp = open(filename,'mode')
+fp.close()
+print() output can be redirected to file using file='' kw param.
+
+Exception class is the base class.
+raise kw is used to throw exceptions explicitly.
+raise TypeError('elements must be numeric')
+
+ A second philosophy, often embraced by Python programmers, is that “it is easier to ask for forgiveness than it is to get permission.” This quote is attributed to Grace Hopper, an early pioneer in computer science.
+
+ try:
+    fp = open( sample.txt )
+except IOError as e:
+    print( Unable to open the file: , e)
+
+except (ValueError, EOFError):
+
+A try-statement can have a finally clause, with a body of code that will always be executed in the standard or exceptional cases, even when an uncaught or re-raised exception occurs. That block is typically used for critical cleanup work, such as closing an open file.
+
+Therefore, if the contents of the original list are modified after the iterator is constructed, but before the iteration is complete, the iterator will be reporting the updated contents of the list
+
+yield keyword differentiates a generator from a function
+
+Advantage of a generator over function:
+The results are only computed if re- quested, and the entire series need not reside in memory at one time. In fact, a generator can effectively produce an infinite series of values.
+
+conditional expression: (expr1 if condition else expr2)
+
+comprehensions syntax: [ expression for value in iterable if condition ]
+
+packing: data -> 1,2,3,4,5
+
+unpacking: a,b,c,d -> range(7,11)
+
+simultaneous assignment: j, k = k, j
+
+The function, dir, reports the names of the identifiers in a given namespace (i.e., the keys of the dictionary), while the function, vars, returns the full dictionary. By default, calls to dir() and vars() report on the most locally enclosing namespace in which they are executed.
+
+
+***OOP*****
+
+OOP Goals
+
+Robustness - handling unexpected inputs gracefully and not give wrong results.
+Adaptability - evolve over time
+Reusability - easily reusable for future applications
+
+OO Design Principles
+
+Moddularity
+Abstraction
+Encapsulation
+
+Pep8
+
+Classes 
+Singular Nouns and Capitalized
+CamelCase - which the first letter of each word is capitalized (e.g., CreditCard).
+
+Functions
+lowercase
+multiple words should be separated by under-scores
+The name of a function should typically be a verb that describes its affect.
+However, if the only purpose of the function is to return a value, the function name may be a noun that describes the value (e.g., sqrt rather than calculate sqrt).
+
+objects and variables shd be a lower case noun
+
+constants shd be all capitalized and separated by underscores.
+
+if a subclass provides its own implementation of an inherited behaviors from a base class, the new definition overrides the inherited one.
